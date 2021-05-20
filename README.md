@@ -1,7 +1,7 @@
 # genomic_file_editors
 All python codes were used to edit my genomic data, file formats, filtering etc, in one way or another :
 
-rename_samples_WGS.py
+RENAME SAMPLES rename_samples_WGS.py
 
 The rename_samples_WGS.py script is used to rename files after the directory they are in. Raw fasta files were sent with random names and the directory they were in was the sample name, with the suffix _1.fq.gz or _2.fq.gz . This was because the samples came with a name that was not easy to identify and had no sample number on but the directory did.
 The python code was written for this problem. For example in file 6, contained my sample 6's sequences in forward (_1.fq.gz) and reverse (_2.fq.gz). 
@@ -12,7 +12,7 @@ The python code was written for this problem. For example in file 6, contained m
  
  rename_samples_WGS.py /path/to/sample/directories
 
-CSV to PED  csv_to_ped.py
+CSV TO PED  csv_to_ped.py
 
 this script took a csv file that only had one base pair at monomorphic sites and typed out two as ped files must be biallelic. It also changed the data from long to wide format and placed a space inbetween each call. No call was changed form a blank to a 0, and the sample number was placed twice at the start. please note ped files also require map files that correspond to the order of the genotypes in the ped file. 
 
@@ -31,6 +31,9 @@ Sample Id	Sample Description	Call	Assay Id	Well Position	Description
 1	 		588-AMB-00228327	A01	N.No-Alleles
 
 
+
+
+
 PED format:
 
 1 1 0 0 0 -9 G G G G A G G G 0 0
@@ -42,4 +45,17 @@ PED format:
 syntax is:
 
 iPLEX_to_ped('/path/to/your/csv.csv', '/out/path/to/your/new/ped.txt')
+
+DOUBLE THE MODE FILTER double_the_mode.py
+
+this script allows you to filter the depth file resulting from VCFTOOLs command --site-mean-depth. The file, for example myvcf.ldepth.mean is a text file that looks like this:
+
+CHROM   POS     MEAN_DEPTH      VAR_DEPTH
+NC_037638.1     56596   85.2857 5371.67
+NC_037638.1     57208   85.5238 4890.01
+NC_037638.1     59559   77.7381 3494.59
+NC_037638.1     60391   51.675  2218.99
+NC_037638.1     60423   51.625  2207.73
+
+the script find the mode of the mean site depth, work out what number is double that and any positions over that number will be written into a text document and that file can be used to remove that sites in VCFTOOLS using --exclude-positions command. 
 
