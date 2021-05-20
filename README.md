@@ -12,7 +12,8 @@ The python code was written for this problem. For example in file 6, contained m
  
  rename_samples_WGS.py /path/to/sample/directories
 
-CSV to PED - 
+CSV to PED  csv_to_ped.py
+
 this script took a csv file that only had one base pair at monomorphic sites and typed out two as ped files must be biallelic. It also changed the data from long to wide format and placed a space inbetween each call. No call was changed form a blank to a 0, and the sample number was placed twice at the start. please note ped files also require map files that correspond to the order of the genotypes in the ped file. 
 
 csv format recieved:
@@ -37,4 +38,8 @@ PED format:
 6 6 0 0 0 -9 G G G G G G G G 0 0
 
 11 11 0 0 0 -9 A G G G A G G A 0
+
+syntax is:
+
+iPLEX_to_ped('/path/to/your/csv.csv', '/out/path/to/your/new/ped.txt')
 
