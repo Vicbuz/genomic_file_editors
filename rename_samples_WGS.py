@@ -29,6 +29,6 @@ def rename(path):
                     os.rename(new_dir+'/'+sample, new_dir+'/'+suffix+'.2.fq.gz')
 
 
-#rename(r"C:/Users/user/Documents/Python_Scripts/rename_files_test")
+#rename(r"C:/path/to/your/directory/of/sample/directories")
 path = str(sys.argv[1])
 rename(path)
