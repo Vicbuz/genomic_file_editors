@@ -1,5 +1,5 @@
 # genomic_file_editors
-python codes used to edit my genomic data and files
+All python codes were used to edit my genomic data, file formats, filtering etc, in one way or another :
 
 rename_samples_WGS.py
 
@@ -11,3 +11,20 @@ The python code was written for this problem. For example in file 6, contained m
  syntax is:
  
  rename_samples_WGS.py /path/to/sample/directories
+
+CSV to PED - 
+this script took a csv file that only had one base pair at monomorphic sites and typed out two as ped files must be biallelic. It also changed the data from long to wide format and placed a space inbetween each call. No call was changed form a blank to a 0, and the sample number was placed twice at the start. please note ped files also require map files that correspond to the order of the genotypes in the ped file. 
+
+csv format recieved:
+
+Sample Id	Sample Description	Call	Assay Id	Well Position	Description
+1	 		437-ahb8451	A01	N.No-Alleles
+1	 	G	312-ahb5635	A01	K.Non-Polymorphic
+1	 		790-AMB-00632040	A01	N.No-Alleles
+1	 	G	1035-AMB-00995347	A01	K.Non-Polymorphic
+1	 		588-AMB-00228327	A01	N.No-Alleles
+
+PED format:
+1 1 0 0 0 -9 G G G G A G G G 0 0
+6 6 0 0 0 -9 G G G G G G G G 0 0
+11 11 0 0 0 -9 A G G G A G G A 0
