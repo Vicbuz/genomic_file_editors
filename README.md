@@ -63,5 +63,5 @@ NC_037638.1     60391   51.675  2218.99
 NC_037638.1     60423   51.625  2207.73
 
 
-the script find the mode of the mean site depth, work out what number is double that and any positions over that number will be written into a text document and that resulting text document can be used to remove that sites in VCFTOOLS using --exclude-positions command. 
+the script finds the mode of the mean site depth, calculates the double of it and any positions over that number will be written into a text document. That resulting text document can be used to remove that sites in VCFTOOLS using --exclude-positions command. 
 
