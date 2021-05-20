@@ -26,5 +26,8 @@ Sample Id	Sample Description	Call	Assay Id	Well Position	Description
 
 PED format:
 1 1 0 0 0 -9 G G G G A G G G 0 0
+
 6 6 0 0 0 -9 G G G G G G G G 0 0
+
 11 11 0 0 0 -9 A G G G A G G A 0
+
