@@ -18,13 +18,20 @@ this script took a csv file that only had one base pair at monomorphic sites and
 csv format recieved:
 
 Sample Id	Sample Description	Call	Assay Id	Well Position	Description
+
 1	 		437-ahb8451	A01	N.No-Alleles
+
 1	 	G	312-ahb5635	A01	K.Non-Polymorphic
+
 1	 		790-AMB-00632040	A01	N.No-Alleles
+
 1	 	G	1035-AMB-00995347	A01	K.Non-Polymorphic
+
 1	 		588-AMB-00228327	A01	N.No-Alleles
 
+
 PED format:
+
 1 1 0 0 0 -9 G G G G A G G G 0 0
 
 6 6 0 0 0 -9 G G G G G G G G 0 0
