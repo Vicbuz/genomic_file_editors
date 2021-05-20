@@ -34,4 +34,4 @@ def double_the_mode(file_in, file_out):
         #if int(item[2]) > depth_max:
             #needs_removing.write(f'{item[0]}\t{item[1]}\n')
 
-double_the_mode('C:/Users/user/Desktop/SNPS/ldepth_site_mean.txt','C:/Users/user/Desktop/SNPS/results_mode')
+double_the_mode('C:/path/to/your/ldepth_site_mean.txt','C:/path/to/results')
