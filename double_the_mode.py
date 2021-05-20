@@ -36,7 +36,7 @@ def double_the_mode(file_in, file_out):
         if float(item[2]) > two_modes:
             needs_removing.write(f'{item[0]}\t{item[1]}\n')
 
-#double_the_mode('C:/Users/user/Desktop/SNPS/ldepth_site_mean.txt','C:/Users/user/Desktop/SNPS/results_mode')
+#double_the_mode('/path/to/the/vcf.ldepth.mean.txt','/path/to/where/you/want/results/file')
 
 file_in=str(sys.argv[1])
 file_out=str(sys.argv[2])
