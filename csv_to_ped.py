@@ -21,13 +21,22 @@ def iPLEX_to_ped(in_file, new_ped):
         iPLEX_C= iPLEX_T.replace('C','C C').replace('CA','C A').replace('CG','C G').replace('CT','C T')
         iPLEX_final = iPLEX_C
         print(iPLEX_final) # iPLEX FINAL has all the biallelc changes
-        melted = iPLEX_final.melt()
-        print(melted)
-        pivot = iPLEX_final.pivot(index="Sample_Id", columns="Assay_Id")# create a wide not long dataframe
+
+        pivot = iPLEX_final.pivot(index="Sample Id", columns="Assay Id")# create a wide not long dataframe
         print(pivot)
-        pivot.to_csv(new_ped, index=True)
+        pivot2 = pivot.drop(['Description'], axis=1)
+        listofzeros = [0] * 62 #this repesents the 62 samples in the CSV but would be any number!
+        #62 samples in csv
+        listofsamples= #insert a list of sample names for example listofsamples = [1,6,11,16,21,26,31,36,41,42,43,216,221,226,231,236]
+        pivot2.insert(loc=0, column='paternal', value=listofzeros)
+        pivot2.insert(loc=0, column='maternal', value=listofzeros)
+        pivot2.insert(loc=0, column='sex', value=listofzeros)
+        pivot2.insert(loc=0, column='not_used', value=listofzeros)
+        pivot2.insert(loc=0, column='sample', value=listofsamples)
         
-       
+        pivot2.to_csv(new_ped, index=True, header=True)
+
+        
     ped.close()
 
 iPLEX_to_ped('/path/to/your/csv.csv', '/out/path/to/your/new/ped.txt')
