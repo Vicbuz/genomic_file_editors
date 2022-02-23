@@ -1,7 +1,7 @@
 # genomic_file_editors
 All python codes were used to edit my genomic data, file formats, filtering etc, in one way or another :
 
-RENAME SAMPLES rename_samples_WGS.py
+# RENAME SAMPLES rename_samples_WGS.py
 
 The rename_samples_WGS.py script is used to rename files after the directory they are in. Raw fasta files were sent with random names and the directory they were in was the sample name, with the suffix _1.fq.gz or _2.fq.gz . This was because the samples came with a name that was not easy to identify and had no sample number on but the directory did.
 The python code was written for this problem. For example in file 6, contained my sample 6's sequences in forward (_1.fq.gz) and reverse (_2.fq.gz). 
@@ -12,7 +12,7 @@ The python code was written for this problem. For example in file 6, contained m
  
  rename_samples_WGS.py /path/to/sample/directories
 
-CSV TO PED  csv_to_ped.py
+# CSV TO PED  csv_to_ped.py
 
 this script took a csv file that only had one base pair at monomorphic sites and typed out two as ped files must be biallelic. It also changed the data from long to wide format and placed a space inbetween each call. No call was changed form a blank to a 0, and the sample number was placed twice at the start. please note ped files also require map files that correspond to the order of the genotypes in the ped file. 
 
@@ -46,7 +46,7 @@ syntax is:
 
 iPLEX_to_ped('/path/to/your/csv.csv', '/out/path/to/your/new/ped.txt')
 
-DOUBLE THE MODE FILTER double_the_mode.py
+# DOUBLE THE MODE FILTER double_the_mode.py
 
 this script allows you to filter the depth file resulting from VCFTOOLs command --site-mean-depth. The file, for example myvcf.ldepth.mean is a text file that looks like this:
 
