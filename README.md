@@ -59,3 +59,7 @@ NC_037638.1     60423   51.625  2207.73
 
 the script finds the mode of the mean site depth, calculates the double of it and any positions over that number will be written into a text document. That resulting text document can be used to remove that sites in VCFTOOLS using --exclude-positions command. 
 
+Syntax is:
+
+double_the_mode('/path/to/the/vcf.ldepth.mean.txt','/path/to/where/you/want/results/file')
+
