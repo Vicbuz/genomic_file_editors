@@ -1,4 +1,4 @@
-# genomic_file_editors
+# Python scripts to solve data wrangling issues in genomic data
 All python codes were used to edit my genomic data, file formats, filtering etc, in one way or another :
 
 ## RENAME SAMPLES rename_samples_WGS.py
